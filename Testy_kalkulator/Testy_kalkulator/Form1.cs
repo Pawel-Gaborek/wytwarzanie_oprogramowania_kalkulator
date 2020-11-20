@@ -22,7 +22,7 @@ namespace Testy_kalkulator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.button1.BackColor = System.Drawing.Color.Green;
+            this.InitCalc.BackColor = System.Drawing.Color.Green;
 
             try
             {
@@ -45,7 +45,7 @@ namespace Testy_kalkulator
             }
             catch (Exception)
             {
-                this.button1.BackColor = System.Drawing.Color.Red;
+                this.InitCalc.BackColor = System.Drawing.Color.Red;
             }
         }
 
