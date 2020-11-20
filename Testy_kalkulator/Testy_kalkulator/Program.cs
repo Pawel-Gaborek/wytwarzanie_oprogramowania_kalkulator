@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kalkulator
+namespace Testy_kalkulator
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Kalkulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Kalkulator());
+            Application.Run(new Form1());
         }
     }
 }

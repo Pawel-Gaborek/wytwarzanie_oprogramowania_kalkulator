@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Kalkulator
 {
-    public partial class Form1 : Form
+    public partial class Kalkulator : Form
     {
-        public Form1()
+        public Kalkulator()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
