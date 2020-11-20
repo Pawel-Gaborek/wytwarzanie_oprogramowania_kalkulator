@@ -30,7 +30,16 @@ namespace Testy_kalkulator
                 if (calc.calcValue != "0")
                 {
                     throw new Exception("");
-                    //this.button1.BackColor = System.Drawing.Color.Red;
+                }
+
+                if (calc.calcType != Calc.CalcType.i64)
+                {
+                    throw new Exception("");
+                }
+
+                if (calc.calcSystem != Calc.CalcSystem.Dec)
+                {
+                    throw new Exception("");
                 }
             }
             catch (Exception)
