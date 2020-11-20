@@ -32,6 +32,8 @@ namespace Testy_kalkulator
             this.InitCalc = new System.Windows.Forms.Button();
             this.buttonDecVal = new System.Windows.Forms.Button();
             this.buttonHexVal = new System.Windows.Forms.Button();
+            this.buttonOctVal = new System.Windows.Forms.Button();
+            this.buttonBinVal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -64,11 +66,31 @@ namespace Testy_kalkulator
             this.buttonHexVal.UseVisualStyleBackColor = true;
             this.buttonHexVal.Click += new System.EventHandler(this.buttonHexVal_Click);
             // 
+            // buttonOctVal
+            // 
+            this.buttonOctVal.Location = new System.Drawing.Point(218, 184);
+            this.buttonOctVal.Name = "buttonOctVal";
+            this.buttonOctVal.Size = new System.Drawing.Size(200, 80);
+            this.buttonOctVal.TabIndex = 3;
+            this.buttonOctVal.Text = "buttonOctVal";
+            this.buttonOctVal.UseVisualStyleBackColor = true;
+            // 
+            // buttonBinVal
+            // 
+            this.buttonBinVal.Location = new System.Drawing.Point(218, 270);
+            this.buttonBinVal.Name = "buttonBinVal";
+            this.buttonBinVal.Size = new System.Drawing.Size(200, 84);
+            this.buttonBinVal.TabIndex = 4;
+            this.buttonBinVal.Text = "buttonBinVal";
+            this.buttonBinVal.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonBinVal);
+            this.Controls.Add(this.buttonOctVal);
             this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonDecVal);
             this.Controls.Add(this.InitCalc);
@@ -83,6 +105,8 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button InitCalc;
         private System.Windows.Forms.Button buttonDecVal;
         private System.Windows.Forms.Button buttonHexVal;
+        private System.Windows.Forms.Button buttonOctVal;
+        private System.Windows.Forms.Button buttonBinVal;
     }
 }
 
