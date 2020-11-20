@@ -18,6 +18,7 @@ namespace Testy_kalkulator
             InitializeComponent();
             button1_Click(null, null);
             buttonDecVal_Click(null, null);
+            buttonHexVal_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -80,6 +81,23 @@ namespace Testy_kalkulator
             catch
             {
                 this.buttonDecVal.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonHexVal_Click(object sender, EventArgs e)
+        {
+            this.buttonHexVal.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Hex;
+                calc.calcType = Calc.CalcType.i64;
+                //test pozytywny
+                calc.calcValue = "0123456789ABCDEF";
+            }
+            catch(Exception)
+            {
+                this.buttonHexVal.BackColor = System.Drawing.Color.Red;
             }
         }
     }

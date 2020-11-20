@@ -31,7 +31,7 @@ namespace Testy_kalkulator
         {
             this.InitCalc = new System.Windows.Forms.Button();
             this.buttonDecVal = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonHexVal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -46,7 +46,7 @@ namespace Testy_kalkulator
             // 
             // buttonDecVal
             // 
-            this.buttonDecVal.Location = new System.Drawing.Point(12, 98);
+            this.buttonDecVal.Location = new System.Drawing.Point(12, 184);
             this.buttonDecVal.Name = "buttonDecVal";
             this.buttonDecVal.Size = new System.Drawing.Size(200, 80);
             this.buttonDecVal.TabIndex = 1;
@@ -54,21 +54,22 @@ namespace Testy_kalkulator
             this.buttonDecVal.UseVisualStyleBackColor = true;
             this.buttonDecVal.Click += new System.EventHandler(this.buttonDecVal_Click);
             // 
-            // button1
+            // buttonHexVal
             // 
-            this.button1.Location = new System.Drawing.Point(12, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 80);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonHexVal.Location = new System.Drawing.Point(12, 98);
+            this.buttonHexVal.Name = "buttonHexVal";
+            this.buttonHexVal.Size = new System.Drawing.Size(200, 80);
+            this.buttonHexVal.TabIndex = 2;
+            this.buttonHexVal.Text = "buttonHexVal";
+            this.buttonHexVal.UseVisualStyleBackColor = true;
+            this.buttonHexVal.Click += new System.EventHandler(this.buttonHexVal_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonDecVal);
             this.Controls.Add(this.InitCalc);
             this.Name = "Form1";
@@ -81,7 +82,7 @@ namespace Testy_kalkulator
 
         private System.Windows.Forms.Button InitCalc;
         private System.Windows.Forms.Button buttonDecVal;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonHexVal;
     }
 }
 
