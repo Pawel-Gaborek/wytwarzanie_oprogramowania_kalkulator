@@ -46,7 +46,7 @@ namespace Testy_kalkulator
             // 
             // buttonDecVal
             // 
-            this.buttonDecVal.Location = new System.Drawing.Point(12, 184);
+            this.buttonDecVal.Location = new System.Drawing.Point(218, 98);
             this.buttonDecVal.Name = "buttonDecVal";
             this.buttonDecVal.Size = new System.Drawing.Size(200, 80);
             this.buttonDecVal.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace Testy_kalkulator
             // 
             // buttonHexVal
             // 
-            this.buttonHexVal.Location = new System.Drawing.Point(12, 98);
+            this.buttonHexVal.Location = new System.Drawing.Point(218, 12);
             this.buttonHexVal.Name = "buttonHexVal";
             this.buttonHexVal.Size = new System.Drawing.Size(200, 80);
             this.buttonHexVal.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace Testy_kalkulator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1519, 450);
             this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonDecVal);
             this.Controls.Add(this.InitCalc);

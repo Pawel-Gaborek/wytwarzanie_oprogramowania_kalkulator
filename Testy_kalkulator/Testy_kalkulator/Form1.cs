@@ -72,7 +72,7 @@ namespace Testy_kalkulator
                 calc.calcSystem = Calc.CalcSystem.Dec;
                 calc.calcType = Calc.CalcType.i64;
                 //test negatywny
-                calc.calcValue = "0ABCDEF";
+                //calc.calcValue = "0ABCDEF";
                 if(calc.calcValue != "0")
                 {
                     throw new Exception("");
@@ -96,6 +96,22 @@ namespace Testy_kalkulator
                 calc.calcValue = "0123456789ABCDEF";
             }
             catch(Exception)
+            {
+                this.buttonHexVal.BackColor = System.Drawing.Color.Red;
+            }
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Hex;
+                calc.calcType = Calc.CalcType.i64;
+                //test negatywny
+                //calc.calcValue = "ABCDEK";
+                if(calc.calcValue != "ABCDEF")
+                {
+                    throw new Exception("");
+                }
+            }
+            catch
             {
                 this.buttonHexVal.BackColor = System.Drawing.Color.Red;
             }
