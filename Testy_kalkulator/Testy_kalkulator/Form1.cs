@@ -17,6 +17,7 @@ namespace Testy_kalkulator
         {
             InitializeComponent();
             button1_Click(null, null);
+            buttonDecVal_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +46,40 @@ namespace Testy_kalkulator
             catch (Exception)
             {
                 this.button1.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonDecVal_Click(object sender, EventArgs e)
+        {
+            this.buttonDecVal.BackColor = System.Drawing.Color.Green;
+
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i64;
+                //test pozytywny
+                calc.calcValue = "0123456789";
+            }
+            catch(Exception)
+            {
+                this.buttonDecVal.BackColor = System.Drawing.Color.Red;
+            }
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i64;
+                //test negatywny
+                calc.calcValue = "0ABCDEF";
+                if(calc.calcValue != "0")
+                {
+                    throw new Exception("");
+                }
+            }
+            catch
+            {
+                this.buttonDecVal.BackColor = System.Drawing.Color.Red;
             }
         }
     }
