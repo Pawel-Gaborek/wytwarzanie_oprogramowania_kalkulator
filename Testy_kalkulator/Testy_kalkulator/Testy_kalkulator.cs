@@ -29,7 +29,8 @@ namespace Testy_kalkulator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.InitCalc.BackColor = System.Drawing.Color.Green;
+            this.InitCalc.BackColor = System.Drawing.Color.Yellow;
+
 
             try
             {
@@ -190,7 +191,7 @@ namespace Testy_kalkulator
                 calc.calcType = Calc.CalcType.i8;
                 //scenariusz pozytywny
                 calc.calcValue = "120";
-                if (calc.calcValue >= "128" | calc.calcValue <= "-129")
+                if ()
                 {
 
                 }
