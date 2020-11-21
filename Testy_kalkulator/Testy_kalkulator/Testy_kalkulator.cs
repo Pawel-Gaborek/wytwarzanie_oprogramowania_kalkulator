@@ -11,9 +11,9 @@ using Kalkulator;
 
 namespace Testy_kalkulator
 {
-    public partial class Testy_kalkulator : Form
+    public partial class Form1 : Form
     {
-        public Testy_kalkulator()
+        public Form1()
         {
             InitializeComponent();
             button1_Click(null, null);
