@@ -31,7 +31,6 @@ namespace Testy_kalkulator
         {
             this.InitCalc = new System.Windows.Forms.Button();
             this.buttonDecVal = new System.Windows.Forms.Button();
-            this.buttonHexVal = new System.Windows.Forms.Button();
             this.buttonOctVal = new System.Windows.Forms.Button();
             this.buttonBinVal = new System.Windows.Forms.Button();
             this.buttonBajt = new System.Windows.Forms.Button();
@@ -39,6 +38,7 @@ namespace Testy_kalkulator
             this.buttonWord = new System.Windows.Forms.Button();
             this.buttonDword = new System.Windows.Forms.Button();
             this.buttonQword = new System.Windows.Forms.Button();
+            this.buttonHexVal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -60,16 +60,6 @@ namespace Testy_kalkulator
             this.buttonDecVal.Text = "buttonDecVal";
             this.buttonDecVal.UseVisualStyleBackColor = true;
             this.buttonDecVal.Click += new System.EventHandler(this.buttonDecVal_Click);
-            // 
-            // buttonHexVal
-            // 
-            this.buttonHexVal.Location = new System.Drawing.Point(168, 12);
-            this.buttonHexVal.Name = "buttonHexVal";
-            this.buttonHexVal.Size = new System.Drawing.Size(150, 60);
-            this.buttonHexVal.TabIndex = 2;
-            this.buttonHexVal.Text = "buttonHexVal";
-            this.buttonHexVal.UseVisualStyleBackColor = true;
-            this.buttonHexVal.Click += new System.EventHandler(this.buttonHexVal_Click);
             // 
             // buttonOctVal
             // 
@@ -138,11 +128,22 @@ namespace Testy_kalkulator
             this.buttonQword.UseVisualStyleBackColor = true;
             this.buttonQword.Click += new System.EventHandler(this.buttonQword_Click);
             // 
+            // buttonHexVal
+            // 
+            this.buttonHexVal.Location = new System.Drawing.Point(168, 12);
+            this.buttonHexVal.Name = "buttonHexVal";
+            this.buttonHexVal.Size = new System.Drawing.Size(150, 60);
+            this.buttonHexVal.TabIndex = 10;
+            this.buttonHexVal.Text = "buttonHexVal";
+            this.buttonHexVal.UseVisualStyleBackColor = true;
+            this.buttonHexVal.Click += new System.EventHandler(this.buttonHexVal_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonQword);
             this.Controls.Add(this.buttonDword);
             this.Controls.Add(this.buttonWord);
@@ -150,7 +151,6 @@ namespace Testy_kalkulator
             this.Controls.Add(this.buttonBajt);
             this.Controls.Add(this.buttonBinVal);
             this.Controls.Add(this.buttonOctVal);
-            this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonDecVal);
             this.Controls.Add(this.InitCalc);
             this.Name = "Form1";
@@ -164,7 +164,6 @@ namespace Testy_kalkulator
 
         private System.Windows.Forms.Button InitCalc;
         private System.Windows.Forms.Button buttonDecVal;
-        private System.Windows.Forms.Button buttonHexVal;
         private System.Windows.Forms.Button buttonOctVal;
         private System.Windows.Forms.Button buttonBinVal;
         private System.Windows.Forms.Button buttonBajt;
@@ -172,6 +171,7 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonWord;
         private System.Windows.Forms.Button buttonDword;
         private System.Windows.Forms.Button buttonQword;
+        private System.Windows.Forms.Button buttonHexVal;
     }
 }
 
