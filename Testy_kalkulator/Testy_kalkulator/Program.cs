@@ -16,7 +16,7 @@ namespace Testy_kalkulator
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Testy_kalkulator());
         }
     }
 }
