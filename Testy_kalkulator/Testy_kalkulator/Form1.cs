@@ -13,6 +13,7 @@ namespace Testy_kalkulator
 {
     public partial class Form1 : Form
     {
+        private long test_value;
         public Form1()
         {
             InitializeComponent();
@@ -196,21 +197,225 @@ namespace Testy_kalkulator
         private void buttonBajt_Click(object sender, EventArgs e)
         {
             this.buttonBajt.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i8;
+                //scenariusz pozytywny
+                calc.calcValue = "125";
+
+                if (calc.calcSystem == Calc.CalcSystem.Bin)
+                {
+
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Oct)
+                {
+
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 128 | test_value <= -129)
+                    {
+                        throw new Exception("");
+                    }
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Hex)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonBajt.BackColor = System.Drawing.Color.Red;
+            }
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i8;
+                //scenariusz negatywny
+                //calc.calcValue = "460";
+
+                if (calc.calcSystem == Calc.CalcSystem.Bin)
+                {
+
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Oct)
+                {
+
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 128 | test_value <= -129)
+                    {
+                        throw new Exception("");
+                    }
+                }
+                else if (calc.calcSystem == Calc.CalcSystem.Hex)
+                {
+
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonBajt.BackColor = System.Drawing.Color.Red;
+            }
         }
 
         private void buttonWord_Click(object sender, EventArgs e)
         {
             this.buttonWord.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i16;
+                //scenariusz pozytywny
+                calc.calcValue = "3456";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 32767 | test_value <= -32768)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonWord.BackColor = System.Drawing.Color.Red;
+            }
+         
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i16;
+                //scenariusz negatywny
+                //calc.calcValue = "75683767";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 32767 | test_value <= -32768)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonWord.BackColor = System.Drawing.Color.Red;
+            }
         }
 
         private void buttonDword_Click(object sender, EventArgs e)
         {
             this.buttonDword.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i32;
+                //scenariusz pozytywny
+                calc.calcValue = "756383";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 2147483647 | test_value <= -2147483648)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonDword.BackColor = System.Drawing.Color.Red;
+            }
+
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i32;
+                //scenariusz negatywny
+                //calc.calcValue = "3147483647";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if (test_value >= 32767 | test_value <= -32768)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonDword.BackColor = System.Drawing.Color.Red;
+            }
         }
 
         private void buttonQword_Click(object sender, EventArgs e)
         {
             this.buttonQword.BackColor = System.Drawing.Color.Green;
+     
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i64;
+                //scenariusz pozytywny
+                calc.calcValue = "31474836470";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if ((test_value > -2147483648) && (test_value < 2147483647))
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonQword.BackColor = System.Drawing.Color.Red;
+            }
+
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i64;
+                //scenariusz negatywny
+                //calc.calcValue = "1147483647";
+
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                {
+                    //test_value = System.Convert.ToInt64(calc.calcValue);
+
+                    if ((test_value > -2147483648) && (test_value < 2147483647))
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonQword.BackColor = System.Drawing.Color.Red;
+            }
         }
 
     }
