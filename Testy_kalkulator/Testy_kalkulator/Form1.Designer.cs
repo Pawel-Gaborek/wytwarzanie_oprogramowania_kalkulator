@@ -39,6 +39,7 @@ namespace Testy_kalkulator
             this.buttonDword = new System.Windows.Forms.Button();
             this.buttonQword = new System.Windows.Forms.Button();
             this.buttonHexVal = new System.Windows.Forms.Button();
+            this.buttonMnozenie = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -138,11 +139,22 @@ namespace Testy_kalkulator
             this.buttonHexVal.UseVisualStyleBackColor = true;
             this.buttonHexVal.Click += new System.EventHandler(this.buttonHexVal_Click_1);
             // 
+            // buttonMnozenie
+            // 
+            this.buttonMnozenie.Location = new System.Drawing.Point(480, 12);
+            this.buttonMnozenie.Name = "buttonMnozenie";
+            this.buttonMnozenie.Size = new System.Drawing.Size(150, 60);
+            this.buttonMnozenie.TabIndex = 11;
+            this.buttonMnozenie.Text = "buttonMnozenie";
+            this.buttonMnozenie.UseVisualStyleBackColor = true;
+            this.buttonMnozenie.Click += new System.EventHandler(this.buttonMnozenie_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonMnozenie);
             this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonQword);
             this.Controls.Add(this.buttonDword);
@@ -172,6 +184,7 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonDword;
         private System.Windows.Forms.Button buttonQword;
         private System.Windows.Forms.Button buttonHexVal;
+        private System.Windows.Forms.Button buttonMnozenie;
     }
 }
 

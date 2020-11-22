@@ -14,6 +14,11 @@ namespace Testy_kalkulator
     public partial class Form1 : Form
     {
         private long test_value;
+        private long test_value_01;
+        private long test_value_02;
+        private long test_value_03;
+        private long test_value_04;
+        private long test_value_05;
         public Form1()
         {
             InitializeComponent();
@@ -26,6 +31,7 @@ namespace Testy_kalkulator
             buttonWord_Click(null, null);
             buttonDword_Click(null, null);
             buttonQword_Click(null, null);
+            buttonMnozenie_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -418,5 +424,9 @@ namespace Testy_kalkulator
             }
         }
 
+        private void buttonMnozenie_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
