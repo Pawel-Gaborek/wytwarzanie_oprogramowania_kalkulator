@@ -37,6 +37,7 @@ namespace Testy_kalkulator
             buttonDzielenie_Click(null, null);
             buttonDodawanie_Click(null, null);
             buttonOdejmowanie_Click(null, null);
+            buttonModulo_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -502,11 +503,17 @@ namespace Testy_kalkulator
                 {
                     if (calc_01.calcType == calc_02.calcType)
                     {
-
                         testValue01 = System.Convert.ToInt64(calc_01.calcValue);
                         testValue02 = System.Convert.ToInt64(calc_02.calcValue);
-                        test_value = testValue01 / testValue02;
-                        if (test_value_01 != test_value)
+                        if (testValue01 > testValue02)
+                        {
+                            test_value = testValue01 / testValue02;
+                            if (test_value_01 != test_value)
+                            {
+                                throw new Exception("");
+                            }
+                        }
+                        else
                         {
                             throw new Exception("");
                         }
@@ -613,6 +620,51 @@ namespace Testy_kalkulator
             catch (Exception)
             {
                 this.buttonOdejmowanie.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonModulo_Click(object sender, EventArgs e)
+        {
+            this.buttonModulo.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc_01 = new Calc();
+                var calc_02 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_02.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+                calc_02.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                calc_01.calcValue = "11";
+                calc_02.calcValue = "3";
+                test_value_01 = 2;
+                
+
+                if (calc_01.calcSystem == calc_02.calcSystem)
+                {
+                    if (calc_01.calcType == calc_02.calcType)
+                    {
+                        testValue01 = System.Convert.ToInt64(calc_01.calcValue);
+                        testValue02 = System.Convert.ToInt64(calc_02.calcValue);
+                        test_value = testValue01 % testValue02;
+                        if (test_value_01 == test_value)
+                        {
+                            if (test_value >= 128 | test_value <= -129)
+                            {
+                                throw new Exception("");
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonModulo.BackColor = System.Drawing.Color.Red;
             }
         }
     }

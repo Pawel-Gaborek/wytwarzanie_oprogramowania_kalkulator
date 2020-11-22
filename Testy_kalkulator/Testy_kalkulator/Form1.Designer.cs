@@ -43,6 +43,7 @@ namespace Testy_kalkulator
             this.buttonDzielenie = new System.Windows.Forms.Button();
             this.buttonDodawanie = new System.Windows.Forms.Button();
             this.buttonOdejmowanie = new System.Windows.Forms.Button();
+            this.buttonModulo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -182,11 +183,22 @@ namespace Testy_kalkulator
             this.buttonOdejmowanie.UseVisualStyleBackColor = true;
             this.buttonOdejmowanie.Click += new System.EventHandler(this.buttonOdejmowanie_Click);
             // 
+            // buttonModulo
+            // 
+            this.buttonModulo.Location = new System.Drawing.Point(480, 276);
+            this.buttonModulo.Name = "buttonModulo";
+            this.buttonModulo.Size = new System.Drawing.Size(150, 60);
+            this.buttonModulo.TabIndex = 15;
+            this.buttonModulo.Text = "buttonModulo";
+            this.buttonModulo.UseVisualStyleBackColor = true;
+            this.buttonModulo.Click += new System.EventHandler(this.buttonModulo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonModulo);
             this.Controls.Add(this.buttonOdejmowanie);
             this.Controls.Add(this.buttonDodawanie);
             this.Controls.Add(this.buttonDzielenie);
@@ -224,6 +236,7 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonDzielenie;
         private System.Windows.Forms.Button buttonDodawanie;
         private System.Windows.Forms.Button buttonOdejmowanie;
+        private System.Windows.Forms.Button buttonModulo;
     }
 }
 
