@@ -19,6 +19,8 @@ namespace Testy_kalkulator
         private long test_value_03;
         private long test_value_04;
         private long test_value_05;
+        private long testValue01;
+        private long testValue02;
         public Form1()
         {
             InitializeComponent();
@@ -426,7 +428,40 @@ namespace Testy_kalkulator
 
         private void buttonMnozenie_Click(object sender, EventArgs e)
         {
+            this.buttonMnozenie.BackColor = System.Drawing.Color.Green;
+            try
+            {
 
+                var calc_01 = new Calc();
+                var calc_02 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_02.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+                calc_02.calcType = Calc.CalcType.i8;
+
+                calc_01.calcValue = "10";
+                calc_02.calcValue = "10";
+                //scenariusz pozytywny
+                test_value_01 = 100;
+                if (calc_01.calcSystem == calc_02.calcSystem)
+                {
+                    if (calc_01.calcType == calc_02.calcType)
+                    {
+                       
+                        testValue01 = System.Convert.ToInt64(calc_01.calcValue);
+                        testValue02 = System.Convert.ToInt64(calc_02.calcValue);
+                        test_value = testValue01*testValue02;
+                        if (test_value_01 != test_value)
+                        {
+                            throw new Exception("");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonMnozenie.BackColor = System.Drawing.Color.Red;
+            }
         }
     }
 }
