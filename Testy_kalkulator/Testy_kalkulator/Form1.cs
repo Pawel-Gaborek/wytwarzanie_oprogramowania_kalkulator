@@ -34,6 +34,9 @@ namespace Testy_kalkulator
             buttonDword_Click(null, null);
             buttonQword_Click(null, null);
             buttonMnozenie_Click(null, null);
+            buttonDzielenie_Click(null, null);
+            buttonDodawanie_Click(null, null);
+            buttonOdejmowanie_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -438,11 +441,17 @@ namespace Testy_kalkulator
                 calc_02.calcSystem = Calc.CalcSystem.Dec;
                 calc_01.calcType = Calc.CalcType.i8;
                 calc_02.calcType = Calc.CalcType.i8;
-
+                
+                //scenariusz pozytywny
                 calc_01.calcValue = "10";
                 calc_02.calcValue = "10";
-                //scenariusz pozytywny
                 test_value_01 = 100;
+
+                //scenariusz negatywny
+                //calc_01.calcValue = "125";
+                //calc_02.calcValue = "125";
+                //test_value_01 = 15625;
+
                 if (calc_01.calcSystem == calc_02.calcSystem)
                 {
                     if (calc_01.calcType == calc_02.calcType)
@@ -451,7 +460,14 @@ namespace Testy_kalkulator
                         testValue01 = System.Convert.ToInt64(calc_01.calcValue);
                         testValue02 = System.Convert.ToInt64(calc_02.calcValue);
                         test_value = testValue01*testValue02;
-                        if (test_value_01 != test_value)
+                        if (test_value_01 == test_value)
+                        {
+                            if (test_value >= 128 | test_value <= -129)
+                            {
+                                throw new Exception("");
+                            }
+                        }
+                        else
                         {
                             throw new Exception("");
                         }
@@ -461,6 +477,142 @@ namespace Testy_kalkulator
             catch (Exception)
             {
                 this.buttonMnozenie.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonDzielenie_Click(object sender, EventArgs e)
+        {
+            this.buttonDzielenie.BackColor = System.Drawing.Color.Green;
+            try
+            {
+
+                var calc_01 = new Calc();
+                var calc_02 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_02.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+                calc_02.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                calc_01.calcValue = "250";
+                calc_02.calcValue = "10";
+                test_value_01 = 25;
+
+                if (calc_01.calcSystem == calc_02.calcSystem)
+                {
+                    if (calc_01.calcType == calc_02.calcType)
+                    {
+
+                        testValue01 = System.Convert.ToInt64(calc_01.calcValue);
+                        testValue02 = System.Convert.ToInt64(calc_02.calcValue);
+                        test_value = testValue01 / testValue02;
+                        if (test_value_01 != test_value)
+                        {
+                            throw new Exception("");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonDzielenie.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonDodawanie_Click(object sender, EventArgs e)
+        {
+            this.buttonDodawanie.BackColor = System.Drawing.Color.Green;
+            try
+            {
+
+                var calc_01 = new Calc();
+                var calc_02 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_02.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+                calc_02.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                calc_01.calcValue = "30";
+                calc_02.calcValue = "30";
+                test_value_01 = 60;
+                //scenariusz negatywny
+                //calc_01.calcValue = "120";
+                //calc_02.calcValue = "120";
+                //test_value_01 = 240;
+
+                if (calc_01.calcSystem == calc_02.calcSystem)
+                {
+                    if (calc_01.calcType == calc_02.calcType)
+                    {
+                        testValue01 = System.Convert.ToInt64(calc_01.calcValue);
+                        testValue02 = System.Convert.ToInt64(calc_02.calcValue);
+                        test_value = testValue01 + testValue02;
+                        if (test_value_01 == test_value)
+                        {
+                            if (test_value >= 128 | test_value <= -129)
+                            {
+                                throw new Exception("");
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonDodawanie.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonOdejmowanie_Click(object sender, EventArgs e)
+        {
+            this.buttonOdejmowanie.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc_01 = new Calc();
+                var calc_02 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_02.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+                calc_02.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                calc_01.calcValue = "125";
+                calc_02.calcValue = "125";
+                test_value_01 = 0;
+                //scenariusz negatywny
+                //calc_01.calcValue = "125";
+                //calc_02.calcValue = "-80";
+                //test_value_01 = 45;
+
+                if (calc_01.calcSystem == calc_02.calcSystem)
+                {
+                    if (calc_01.calcType == calc_02.calcType)
+                    {
+                        testValue01 = System.Convert.ToInt64(calc_01.calcValue);
+                        testValue02 = System.Convert.ToInt64(calc_02.calcValue);
+                        test_value = testValue01 - testValue02;
+                        if (test_value_01 == test_value)
+                        {
+                            if (test_value >= 128 | test_value <= -129)
+                            {
+                                throw new Exception("");
+                            }
+                        }
+                        else
+                        {
+                            throw new Exception("");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonOdejmowanie.BackColor = System.Drawing.Color.Red;
             }
         }
     }

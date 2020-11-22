@@ -40,6 +40,9 @@ namespace Testy_kalkulator
             this.buttonQword = new System.Windows.Forms.Button();
             this.buttonHexVal = new System.Windows.Forms.Button();
             this.buttonMnozenie = new System.Windows.Forms.Button();
+            this.buttonDzielenie = new System.Windows.Forms.Button();
+            this.buttonDodawanie = new System.Windows.Forms.Button();
+            this.buttonOdejmowanie = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -149,11 +152,44 @@ namespace Testy_kalkulator
             this.buttonMnozenie.UseVisualStyleBackColor = true;
             this.buttonMnozenie.Click += new System.EventHandler(this.buttonMnozenie_Click);
             // 
+            // buttonDzielenie
+            // 
+            this.buttonDzielenie.Location = new System.Drawing.Point(480, 78);
+            this.buttonDzielenie.Name = "buttonDzielenie";
+            this.buttonDzielenie.Size = new System.Drawing.Size(150, 60);
+            this.buttonDzielenie.TabIndex = 12;
+            this.buttonDzielenie.Text = "buttonDzielenie";
+            this.buttonDzielenie.UseVisualStyleBackColor = true;
+            this.buttonDzielenie.Click += new System.EventHandler(this.buttonDzielenie_Click);
+            // 
+            // buttonDodawanie
+            // 
+            this.buttonDodawanie.Location = new System.Drawing.Point(480, 144);
+            this.buttonDodawanie.Name = "buttonDodawanie";
+            this.buttonDodawanie.Size = new System.Drawing.Size(150, 60);
+            this.buttonDodawanie.TabIndex = 13;
+            this.buttonDodawanie.Text = "buttonDodawanie";
+            this.buttonDodawanie.UseVisualStyleBackColor = true;
+            this.buttonDodawanie.Click += new System.EventHandler(this.buttonDodawanie_Click);
+            // 
+            // buttonOdejmowanie
+            // 
+            this.buttonOdejmowanie.Location = new System.Drawing.Point(480, 210);
+            this.buttonOdejmowanie.Name = "buttonOdejmowanie";
+            this.buttonOdejmowanie.Size = new System.Drawing.Size(150, 60);
+            this.buttonOdejmowanie.TabIndex = 14;
+            this.buttonOdejmowanie.Text = "buttonOdejmowanie";
+            this.buttonOdejmowanie.UseVisualStyleBackColor = true;
+            this.buttonOdejmowanie.Click += new System.EventHandler(this.buttonOdejmowanie_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonOdejmowanie);
+            this.Controls.Add(this.buttonDodawanie);
+            this.Controls.Add(this.buttonDzielenie);
             this.Controls.Add(this.buttonMnozenie);
             this.Controls.Add(this.buttonHexVal);
             this.Controls.Add(this.buttonQword);
@@ -185,6 +221,9 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonQword;
         private System.Windows.Forms.Button buttonHexVal;
         private System.Windows.Forms.Button buttonMnozenie;
+        private System.Windows.Forms.Button buttonDzielenie;
+        private System.Windows.Forms.Button buttonDodawanie;
+        private System.Windows.Forms.Button buttonOdejmowanie;
     }
 }
 
