@@ -44,6 +44,7 @@ namespace Testy_kalkulator
             this.buttonDodawanie = new System.Windows.Forms.Button();
             this.buttonOdejmowanie = new System.Windows.Forms.Button();
             this.buttonModulo = new System.Windows.Forms.Button();
+            this.buttonZmianaZnaku = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -193,11 +194,22 @@ namespace Testy_kalkulator
             this.buttonModulo.UseVisualStyleBackColor = true;
             this.buttonModulo.Click += new System.EventHandler(this.buttonModulo_Click);
             // 
+            // buttonZmianaZnaku
+            // 
+            this.buttonZmianaZnaku.Location = new System.Drawing.Point(636, 12);
+            this.buttonZmianaZnaku.Name = "buttonZmianaZnaku";
+            this.buttonZmianaZnaku.Size = new System.Drawing.Size(150, 60);
+            this.buttonZmianaZnaku.TabIndex = 16;
+            this.buttonZmianaZnaku.Text = "buttonZmianaZnaku";
+            this.buttonZmianaZnaku.UseVisualStyleBackColor = true;
+            this.buttonZmianaZnaku.Click += new System.EventHandler(this.buttonZmianaZnaku_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonZmianaZnaku);
             this.Controls.Add(this.buttonModulo);
             this.Controls.Add(this.buttonOdejmowanie);
             this.Controls.Add(this.buttonDodawanie);
@@ -237,6 +249,7 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonDodawanie;
         private System.Windows.Forms.Button buttonOdejmowanie;
         private System.Windows.Forms.Button buttonModulo;
+        private System.Windows.Forms.Button buttonZmianaZnaku;
     }
 }
 

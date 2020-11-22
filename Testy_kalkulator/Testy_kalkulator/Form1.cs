@@ -38,6 +38,7 @@ namespace Testy_kalkulator
             buttonDodawanie_Click(null, null);
             buttonOdejmowanie_Click(null, null);
             buttonModulo_Click(null, null);
+            buttonZmianaZnaku_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -665,6 +666,32 @@ namespace Testy_kalkulator
             catch (Exception)
             {
                 this.buttonModulo.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonZmianaZnaku_Click(object sender, EventArgs e)
+        {
+            this.buttonZmianaZnaku.BackColor = System.Drawing.Color.Pink;
+            try
+            {
+                var calc_01 = new Calc();
+                calc_01.calcSystem = Calc.CalcSystem.Dec;
+                calc_01.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                calc_01.calcValue = "11";
+   
+                test_value_01 = -11;
+                test_value = System.Convert.ToInt64(calc_01.calcValue)*-1;
+                
+                if (test_value != test_value_01)
+                {
+                    throw new Exception("");
+                }
+            }
+            catch(Exception)
+            {
+                this.buttonZmianaZnaku.BackColor = System.Drawing.Color.Red;
             }
         }
     }
