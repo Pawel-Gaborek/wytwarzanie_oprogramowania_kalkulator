@@ -39,6 +39,7 @@ namespace Testy_kalkulator
             buttonOdejmowanie_Click(null, null);
             buttonModulo_Click(null, null);
             buttonZmianaZnaku_Click(null, null);
+            buttonCyfryASCII_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -671,7 +672,7 @@ namespace Testy_kalkulator
 
         private void buttonZmianaZnaku_Click(object sender, EventArgs e)
         {
-            this.buttonZmianaZnaku.BackColor = System.Drawing.Color.Pink;
+            this.buttonZmianaZnaku.BackColor = System.Drawing.Color.Green;
             try
             {
                 var calc_01 = new Calc();
@@ -692,6 +693,32 @@ namespace Testy_kalkulator
             catch(Exception)
             {
                 this.buttonZmianaZnaku.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonCyfryASCII_Click(object sender, EventArgs e)
+        {
+            this.buttonCyfryASCII.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Dec;
+                calc.calcType = Calc.CalcType.i8;
+                calc.calcValue = "3";
+                //scenariusz pozytywny
+
+                //scenariusz negatywny
+                //calc.calcValue = "q";
+
+                testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
+                if (testValue01 > 57 | testValue01 < 48)
+                {
+                    throw new Exception("");
+                }
+            }
+            catch(Exception)
+            {
+                this.buttonCyfryASCII.BackColor = System.Drawing.Color.Red;
             }
         }
     }

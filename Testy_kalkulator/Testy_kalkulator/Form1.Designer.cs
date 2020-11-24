@@ -45,6 +45,7 @@ namespace Testy_kalkulator
             this.buttonOdejmowanie = new System.Windows.Forms.Button();
             this.buttonModulo = new System.Windows.Forms.Button();
             this.buttonZmianaZnaku = new System.Windows.Forms.Button();
+            this.buttonCyfryASCII = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -204,11 +205,22 @@ namespace Testy_kalkulator
             this.buttonZmianaZnaku.UseVisualStyleBackColor = true;
             this.buttonZmianaZnaku.Click += new System.EventHandler(this.buttonZmianaZnaku_Click);
             // 
+            // buttonCyfryASCII
+            // 
+            this.buttonCyfryASCII.Location = new System.Drawing.Point(792, 12);
+            this.buttonCyfryASCII.Name = "buttonCyfryASCII";
+            this.buttonCyfryASCII.Size = new System.Drawing.Size(150, 60);
+            this.buttonCyfryASCII.TabIndex = 17;
+            this.buttonCyfryASCII.Text = "buttonCyfryASCII";
+            this.buttonCyfryASCII.UseVisualStyleBackColor = true;
+            this.buttonCyfryASCII.Click += new System.EventHandler(this.buttonCyfryASCII_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonCyfryASCII);
             this.Controls.Add(this.buttonZmianaZnaku);
             this.Controls.Add(this.buttonModulo);
             this.Controls.Add(this.buttonOdejmowanie);
@@ -250,6 +262,7 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonOdejmowanie;
         private System.Windows.Forms.Button buttonModulo;
         private System.Windows.Forms.Button buttonZmianaZnaku;
+        private System.Windows.Forms.Button buttonCyfryASCII;
     }
 }
 
