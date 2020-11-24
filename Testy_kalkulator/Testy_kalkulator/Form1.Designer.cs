@@ -45,7 +45,8 @@ namespace Testy_kalkulator
             this.buttonOdejmowanie = new System.Windows.Forms.Button();
             this.buttonModulo = new System.Windows.Forms.Button();
             this.buttonZmianaZnaku = new System.Windows.Forms.Button();
-            this.buttonCyfryASCII = new System.Windows.Forms.Button();
+            this.buttonCyfryASCIIdzies = new System.Windows.Forms.Button();
+            this.buttonCyfryASCIIbin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -205,22 +206,33 @@ namespace Testy_kalkulator
             this.buttonZmianaZnaku.UseVisualStyleBackColor = true;
             this.buttonZmianaZnaku.Click += new System.EventHandler(this.buttonZmianaZnaku_Click);
             // 
-            // buttonCyfryASCII
+            // buttonCyfryASCIIdzies
             // 
-            this.buttonCyfryASCII.Location = new System.Drawing.Point(792, 12);
-            this.buttonCyfryASCII.Name = "buttonCyfryASCII";
-            this.buttonCyfryASCII.Size = new System.Drawing.Size(150, 60);
-            this.buttonCyfryASCII.TabIndex = 17;
-            this.buttonCyfryASCII.Text = "buttonCyfryASCII";
-            this.buttonCyfryASCII.UseVisualStyleBackColor = true;
-            this.buttonCyfryASCII.Click += new System.EventHandler(this.buttonCyfryASCII_Click);
+            this.buttonCyfryASCIIdzies.Location = new System.Drawing.Point(792, 12);
+            this.buttonCyfryASCIIdzies.Name = "buttonCyfryASCIIdzies";
+            this.buttonCyfryASCIIdzies.Size = new System.Drawing.Size(150, 60);
+            this.buttonCyfryASCIIdzies.TabIndex = 17;
+            this.buttonCyfryASCIIdzies.Text = "buttonCyfryASCIIdzies";
+            this.buttonCyfryASCIIdzies.UseVisualStyleBackColor = true;
+            this.buttonCyfryASCIIdzies.Click += new System.EventHandler(this.buttonCyfryASCII_Click);
+            // 
+            // buttonCyfryASCIIbin
+            // 
+            this.buttonCyfryASCIIbin.Location = new System.Drawing.Point(792, 78);
+            this.buttonCyfryASCIIbin.Name = "buttonCyfryASCIIbin";
+            this.buttonCyfryASCIIbin.Size = new System.Drawing.Size(150, 60);
+            this.buttonCyfryASCIIbin.TabIndex = 18;
+            this.buttonCyfryASCIIbin.Text = "buttonCyfryASCIIbin";
+            this.buttonCyfryASCIIbin.UseVisualStyleBackColor = true;
+            this.buttonCyfryASCIIbin.Click += new System.EventHandler(this.buttonCyfryASCIIbin_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
-            this.Controls.Add(this.buttonCyfryASCII);
+            this.Controls.Add(this.buttonCyfryASCIIbin);
+            this.Controls.Add(this.buttonCyfryASCIIdzies);
             this.Controls.Add(this.buttonZmianaZnaku);
             this.Controls.Add(this.buttonModulo);
             this.Controls.Add(this.buttonOdejmowanie);
@@ -262,7 +274,8 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonOdejmowanie;
         private System.Windows.Forms.Button buttonModulo;
         private System.Windows.Forms.Button buttonZmianaZnaku;
-        private System.Windows.Forms.Button buttonCyfryASCII;
+        private System.Windows.Forms.Button buttonCyfryASCIIdzies;
+        private System.Windows.Forms.Button buttonCyfryASCIIbin;
     }
 }
 

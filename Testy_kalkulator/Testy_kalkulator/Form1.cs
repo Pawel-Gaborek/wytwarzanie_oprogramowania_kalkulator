@@ -40,6 +40,7 @@ namespace Testy_kalkulator
             buttonModulo_Click(null, null);
             buttonZmianaZnaku_Click(null, null);
             buttonCyfryASCII_Click(null, null);
+            buttonCyfryASCIIbin_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -698,7 +699,7 @@ namespace Testy_kalkulator
 
         private void buttonCyfryASCII_Click(object sender, EventArgs e)
         {
-            this.buttonCyfryASCII.BackColor = System.Drawing.Color.Green;
+            this.buttonCyfryASCIIdzies.BackColor = System.Drawing.Color.Green;
             try
             {
                 var calc = new Calc();
@@ -709,16 +710,48 @@ namespace Testy_kalkulator
 
                 //scenariusz negatywny
                 //calc.calcValue = "q";
-
-                testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
-                if (testValue01 > 57 | testValue01 < 48)
+                if (calc.calcSystem == Calc.CalcSystem.Dec)
                 {
-                    throw new Exception("");
+                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
+                    if (testValue01 > 57 | testValue01 < 48)
+                    {
+                        throw new Exception("");
+                    }
                 }
             }
             catch(Exception)
             {
-                this.buttonCyfryASCII.BackColor = System.Drawing.Color.Red;
+                this.buttonCyfryASCIIdzies.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonCyfryASCIIbin_Click(object sender, EventArgs e)
+        {
+            this.buttonCyfryASCIIbin.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Bin;
+                calc.calcType = Calc.CalcType.i8;
+                calc.calcValue = "1";
+                //scenariusz pozytywny
+
+                //scenariusz negatywny
+                //calc.calcValue = "2";
+                
+                if (calc.calcSystem == Calc.CalcSystem.Bin)
+                {
+                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
+                    Console.WriteLine(testValue01);
+                    if (testValue01 > 49 | testValue01 < 48)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch(Exception)
+            {
+                this.buttonCyfryASCIIbin.BackColor = System.Drawing.Color.Red;
             }
         }
     }
