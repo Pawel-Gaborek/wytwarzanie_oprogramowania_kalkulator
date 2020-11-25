@@ -47,6 +47,8 @@ namespace Testy_kalkulator
             this.buttonZmianaZnaku = new System.Windows.Forms.Button();
             this.buttonCyfryASCIIdzies = new System.Windows.Forms.Button();
             this.buttonCyfryASCIIbin = new System.Windows.Forms.Button();
+            this.buttonCyfryASCIIoct = new System.Windows.Forms.Button();
+            this.buttonCyfryASCIIhex = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // InitCalc
@@ -226,11 +228,33 @@ namespace Testy_kalkulator
             this.buttonCyfryASCIIbin.UseVisualStyleBackColor = true;
             this.buttonCyfryASCIIbin.Click += new System.EventHandler(this.buttonCyfryASCIIbin_Click);
             // 
+            // buttonCyfryASCIIoct
+            // 
+            this.buttonCyfryASCIIoct.Location = new System.Drawing.Point(792, 144);
+            this.buttonCyfryASCIIoct.Name = "buttonCyfryASCIIoct";
+            this.buttonCyfryASCIIoct.Size = new System.Drawing.Size(150, 60);
+            this.buttonCyfryASCIIoct.TabIndex = 19;
+            this.buttonCyfryASCIIoct.Text = "buttonCyfryASCIIoct";
+            this.buttonCyfryASCIIoct.UseVisualStyleBackColor = true;
+            this.buttonCyfryASCIIoct.Click += new System.EventHandler(this.buttonCyfryASCIIoct_Click);
+            // 
+            // buttonCyfryASCIIhex
+            // 
+            this.buttonCyfryASCIIhex.Location = new System.Drawing.Point(792, 210);
+            this.buttonCyfryASCIIhex.Name = "buttonCyfryASCIIhex";
+            this.buttonCyfryASCIIhex.Size = new System.Drawing.Size(150, 60);
+            this.buttonCyfryASCIIhex.TabIndex = 20;
+            this.buttonCyfryASCIIhex.Text = "buttonCyfryASCIIhex";
+            this.buttonCyfryASCIIhex.UseVisualStyleBackColor = true;
+            this.buttonCyfryASCIIhex.Click += new System.EventHandler(this.buttonCyfryASCIIhex_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1519, 450);
+            this.Controls.Add(this.buttonCyfryASCIIhex);
+            this.Controls.Add(this.buttonCyfryASCIIoct);
             this.Controls.Add(this.buttonCyfryASCIIbin);
             this.Controls.Add(this.buttonCyfryASCIIdzies);
             this.Controls.Add(this.buttonZmianaZnaku);
@@ -276,6 +300,8 @@ namespace Testy_kalkulator
         private System.Windows.Forms.Button buttonZmianaZnaku;
         private System.Windows.Forms.Button buttonCyfryASCIIdzies;
         private System.Windows.Forms.Button buttonCyfryASCIIbin;
+        private System.Windows.Forms.Button buttonCyfryASCIIoct;
+        private System.Windows.Forms.Button buttonCyfryASCIIhex;
     }
 }
 

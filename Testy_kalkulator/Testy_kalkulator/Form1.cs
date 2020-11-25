@@ -41,6 +41,8 @@ namespace Testy_kalkulator
             buttonZmianaZnaku_Click(null, null);
             buttonCyfryASCII_Click(null, null);
             buttonCyfryASCIIbin_Click(null, null);
+            buttonCyfryASCIIoct_Click(null, null);
+            buttonCyfryASCIIhex_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -752,6 +754,79 @@ namespace Testy_kalkulator
             catch(Exception)
             {
                 this.buttonCyfryASCIIbin.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonCyfryASCIIoct_Click(object sender, EventArgs e)
+        {
+            this.buttonCyfryASCIIoct.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Oct;
+                calc.calcType = Calc.CalcType.i8;
+                calc.calcValue = "4";
+                //scenariusz pozytywny
+
+                //scenariusz negatywny
+                //calc.calcValue = "8";
+
+                if (calc.calcSystem == Calc.CalcSystem.Oct)
+                {
+                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
+                    Console.WriteLine(testValue01);
+                    if (testValue01 > 55 | testValue01 < 48)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonCyfryASCIIoct.BackColor = System.Drawing.Color.Red;
+            }
+        }
+
+        private void buttonCyfryASCIIhex_Click(object sender, EventArgs e)
+        {
+            this.buttonCyfryASCIIhex.BackColor = System.Drawing.Color.Green;
+            try
+            {
+                var calc = new Calc();
+                calc.calcSystem = Calc.CalcSystem.Hex;
+                calc.calcType = Calc.CalcType.i8;
+
+                //scenariusz pozytywny
+                //calc.calcValue = "b";
+                //calc.calcValue = "A";
+
+                //scenariusz negatywny
+                //calc.calcValue = "q";
+                //calc.calcValue = "K";
+                if (calc.calcSystem == Calc.CalcSystem.Hex)
+                {
+                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
+                    Console.WriteLine(testValue01);
+                    if (testValue01 < 48)
+                        throw new Exception("");
+
+                    else if (57 < testValue01 & testValue01 > 65)
+                    {
+                        throw new Exception("");
+                    }
+                    else if (70 < testValue01 & testValue01 > 97)
+                    {
+                        throw new Exception("");
+                    }
+                    else if (102 < testValue01)
+                    {
+                        throw new Exception("");
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                this.buttonCyfryASCIIhex.BackColor = System.Drawing.Color.Red;
             }
         }
     }
