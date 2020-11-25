@@ -797,7 +797,7 @@ namespace Testy_kalkulator
                 calc.calcType = Calc.CalcType.i8;
 
                 //scenariusz pozytywny
-                //calc.calcValue = "b";
+                calc.calcValue = "b";
                 //calc.calcValue = "A";
 
                 //scenariusz negatywny
@@ -808,13 +808,14 @@ namespace Testy_kalkulator
                     testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
                     Console.WriteLine(testValue01);
                     if (testValue01 < 48)
-                        throw new Exception("");
-
-                    else if (57 < testValue01 & testValue01 > 65)
                     {
                         throw new Exception("");
                     }
-                    else if (70 < testValue01 & testValue01 > 97)
+                    else if (57<testValue01 & testValue01<65)
+                    {
+                        throw new Exception("");
+                    }
+                    else if (70 < testValue01 & testValue01 < 97)
                     {
                         throw new Exception("");
                     }
