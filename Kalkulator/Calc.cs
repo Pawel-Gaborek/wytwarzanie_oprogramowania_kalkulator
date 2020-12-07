@@ -15,30 +15,53 @@ namespace Kalkulator
             this.calcSystem = CalcSystem.Dec;
             this.calcValue = "0";
         }
-        public string calcValue 
+        public string calcValue
         {
             get
             {
                 return _calcValue;
             }
-
             set
             {
-                if(this.calcSystem == CalcSystem.Hex)
+                long testValue01;
+                for (int i = 0; i < value.Length; i++)
                 {
-
-                }
-                else if(this.calcSystem == CalcSystem.Dec)
-                {
-
-                }
-                else if(this.calcSystem == CalcSystem.Oct)
-                {
-
-                }
-                else if(this.calcSystem == CalcSystem.Bin)
-                {
-
+                    if (this.calcSystem == CalcSystem.Hex)
+                    {
+                        testValue01 = Char.ConvertToUtf32(value, i);
+                        if ((testValue01 < 48) | (57 < testValue01 & testValue01 < 65) | (70 < testValue01 & testValue01 < 97) | (102 < testValue01))
+                        {
+                            value = value.Remove(i, 1);
+                            i = 0;
+                        }
+                    }
+                    else if (this.calcSystem == CalcSystem.Dec)
+                    {
+                        testValue01 = Char.ConvertToUtf32(value, i);
+                        if (testValue01 < 48 | testValue01 > 57)
+                        {
+                            value = value.Remove(i, 1);
+                            i = 0;
+                        }
+                    }
+                    else if (this.calcSystem == CalcSystem.Oct)
+                    {
+                        testValue01 = Char.ConvertToUtf32(value, i);
+                        if (testValue01 < 48 | testValue01 > 55)
+                        {
+                            value = value.Remove(i, 1);
+                            i = 0;
+                        }
+                    }
+                    else if (this.calcSystem == CalcSystem.Bin)
+                    {
+                        testValue01 = Char.ConvertToUtf32(value, i);
+                        if (testValue01 < 48 | testValue01 > 49)
+                        {
+                            value = value.Remove(i, 1);
+                            i = 0;
+                        }
+                    }
                 }
                 _calcValue = value;
             }

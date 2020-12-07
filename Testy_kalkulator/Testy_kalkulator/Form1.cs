@@ -24,21 +24,21 @@ namespace Testy_kalkulator
         public Form1()
         {
             InitializeComponent();
-            button1_Click(null, null);
-            buttonDecVal_Click(null, null);
-            buttonHexVal_Click_1(null, null);
-            buttonOctVal_Click(null, null);
-            buttonBinVal_Click(null, null);
-            buttonBajt_Click(null, null);
-            buttonWord_Click(null, null);
-            buttonDword_Click(null, null);
-            buttonQword_Click(null, null);
-            buttonMnozenie_Click(null, null);
-            buttonDzielenie_Click(null, null);
-            buttonDodawanie_Click(null, null);
-            buttonOdejmowanie_Click(null, null);
-            buttonModulo_Click(null, null);
-            buttonZmianaZnaku_Click(null, null);
+            //button1_Click(null, null);
+            //buttonDecVal_Click(null, null);
+            //buttonHexVal_Click_1(null, null);
+            //buttonOctVal_Click(null, null);
+            //buttonBinVal_Click(null, null);
+            //buttonBajt_Click(null, null);
+            //buttonWord_Click(null, null);
+            //buttonDword_Click(null, null);
+            //buttonQword_Click(null, null);
+            //buttonMnozenie_Click(null, null);
+            //buttonDzielenie_Click(null, null);
+            //buttonDodawanie_Click(null, null);
+            //buttonOdejmowanie_Click(null, null);
+            //buttonModulo_Click(null, null);
+            //buttonZmianaZnaku_Click(null, null);
             buttonCyfryASCII_Click(null, null);
             buttonCyfryASCIIbin_Click(null, null);
             buttonCyfryASCIIoct_Click(null, null);
@@ -707,19 +707,13 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Dec;
                 calc.calcType = Calc.CalcType.i8;
-                calc.calcValue = "3";
-                //scenariusz pozytywny
+                calc.calcValue = "34A2NJK34";
 
-                //scenariusz negatywny
-                //calc.calcValue = "q";
-                if (calc.calcSystem == Calc.CalcSystem.Dec)
+                if (calc.calcValue != "34234")
                 {
-                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
-                    if (testValue01 > 57 | testValue01 < 48)
-                    {
-                        throw new Exception("");
-                    }
+                    throw new Exception("");
                 }
+                Console.WriteLine(calc.calcValue);
             }
             catch(Exception)
             {
@@ -735,20 +729,11 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Bin;
                 calc.calcType = Calc.CalcType.i8;
-                calc.calcValue = "1";
-                //scenariusz pozytywny
-
-                //scenariusz negatywny
-                //calc.calcValue = "2";
-                
-                if (calc.calcSystem == Calc.CalcSystem.Bin)
+                calc.calcValue = "1111010101AADS00";
+ 
+                if (calc.calcValue != "111101010100")
                 {
-                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
-                    Console.WriteLine(testValue01);
-                    if (testValue01 > 49 | testValue01 < 48)
-                    {
-                        throw new Exception("");
-                    }
+                    throw new Exception("");
                 }
             }
             catch(Exception)
@@ -765,20 +750,11 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Oct;
                 calc.calcType = Calc.CalcType.i8;
-                calc.calcValue = "4";
-                //scenariusz pozytywny
-
-                //scenariusz negatywny
-                //calc.calcValue = "8";
-
-                if (calc.calcSystem == Calc.CalcSystem.Oct)
+                calc.calcValue = "4565399986577332";
+        
+                if (calc.calcValue != "456536577332")
                 {
-                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
-                    Console.WriteLine(testValue01);
-                    if (testValue01 > 55 | testValue01 < 48)
-                    {
-                        throw new Exception("");
-                    }
+                    throw new Exception("");
                 }
             }
             catch (Exception)
@@ -795,35 +771,13 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Hex;
                 calc.calcType = Calc.CalcType.i8;
+                calc.calcValue = "34df4287jhytwGH";
 
-                //scenariusz pozytywny
-                calc.calcValue = "b";
-                //calc.calcValue = "A";
-
-                //scenariusz negatywny
-                //calc.calcValue = "q";
-                //calc.calcValue = "K";
-                if (calc.calcSystem == Calc.CalcSystem.Hex)
+                if (calc.calcValue != "34df4287")
                 {
-                    testValue01 = Char.ConvertToUtf32(calc.calcValue, 0);
-                    Console.WriteLine(testValue01);
-                    if (testValue01 < 48)
-                    {
-                        throw new Exception("");
-                    }
-                    else if (57<testValue01 & testValue01<65)
-                    {
-                        throw new Exception("");
-                    }
-                    else if (70 < testValue01 & testValue01 < 97)
-                    {
-                        throw new Exception("");
-                    }
-                    else if (102 < testValue01)
-                    {
-                        throw new Exception("");
-                    }
+                    throw new Exception("");
                 }
+                Console.WriteLine(calc.calcValue);
             }
             catch (Exception)
             {
