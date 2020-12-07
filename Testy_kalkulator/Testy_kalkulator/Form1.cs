@@ -25,10 +25,10 @@ namespace Testy_kalkulator
         {
             InitializeComponent();
             //button1_Click(null, null);
-            //buttonDecVal_Click(null, null);
-            //buttonHexVal_Click_1(null, null);
-            //buttonOctVal_Click(null, null);
-            //buttonBinVal_Click(null, null);
+            buttonDecVal_Click(null, null);
+            buttonHexVal_Click_1(null, null);
+            buttonOctVal_Click(null, null);
+            buttonBinVal_Click(null, null);
             //buttonBajt_Click(null, null);
             //buttonWord_Click(null, null);
             //buttonDword_Click(null, null);
@@ -83,26 +83,14 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Dec;
                 calc.calcType = Calc.CalcType.i64;
-                //test pozytywny
                 calc.calcValue = "0123456789";
-            }
-            catch(Exception)
-            {
-                this.buttonDecVal.BackColor = System.Drawing.Color.Red;
-            }
-            try
-            {
-                var calc = new Calc();
-                calc.calcSystem = Calc.CalcSystem.Dec;
-                calc.calcType = Calc.CalcType.i64;
-                //test negatywny
-                //calc.calcValue = "0ABCDEF";
-                if(calc.calcValue != "0")
+
+                if (calc.calcSystem != Calc.CalcSystem.Dec)
                 {
                     throw new Exception("");
                 }
             }
-            catch
+            catch(Exception)
             {
                 this.buttonDecVal.BackColor = System.Drawing.Color.Red;
             }
@@ -117,21 +105,9 @@ namespace Testy_kalkulator
                 var calc = new Calc();
                 calc.calcSystem = Calc.CalcSystem.Hex;
                 calc.calcType = Calc.CalcType.i64;
-                //test pozytywny
                 calc.calcValue = "0123456789ABCDEF";
-            }
-            catch (Exception)
-            {
-                this.buttonHexVal.BackColor = System.Drawing.Color.Red;
-            }
-            try
-            {
-                var calc = new Calc();
-                calc.calcSystem = Calc.CalcSystem.Hex;
-                calc.calcType = Calc.CalcType.i64;
-                //test negatywny
-                //calc.calcValue = "ABCDEK";
-                if (calc.calcValue != "0")
+                
+                if (calc.calcSystem != Calc.CalcSystem.Hex)
                 {
                     throw new Exception("");
                 }
@@ -153,19 +129,7 @@ namespace Testy_kalkulator
                 calc.calcType = Calc.CalcType.i64;
                 //test pozytywny
                 calc.calcValue = "01234567";
-            }
-            catch (Exception)
-            {
-                this.buttonOctVal.BackColor = System.Drawing.Color.Red;
-            }
-            try
-            {
-                var calc = new Calc();
-                calc.calcSystem = Calc.CalcSystem.Oct;
-                calc.calcType = Calc.CalcType.i64;
-                //test negatywny
-                //calc.calcValue = "0ABCDEF";
-                if (calc.calcValue != "0")
+                if (calc.calcSystem != Calc.CalcSystem.Oct)
                 {
                     throw new Exception("");
                 }
@@ -187,19 +151,8 @@ namespace Testy_kalkulator
                 calc.calcType = Calc.CalcType.i64;
                 //test pozytywny
                 calc.calcValue = "011110010101";
-            }
-            catch (Exception)
-            {
-                this.buttonBinVal.BackColor = System.Drawing.Color.Red;
-            }
-            try
-            {
-                var calc = new Calc();
-                calc.calcSystem = Calc.CalcSystem.Bin;
-                calc.calcType = Calc.CalcType.i64;
-                //test negatywny
-                //calc.calcValue = "11001234000";
-                if (calc.calcValue != "0")
+
+                if (calc.calcSystem != Calc.CalcSystem.Bin)
                 {
                     throw new Exception("");
                 }
@@ -208,7 +161,6 @@ namespace Testy_kalkulator
             {
                 this.buttonBinVal.BackColor = System.Drawing.Color.Red;
             }
-
         }
 
         private void buttonBajt_Click(object sender, EventArgs e)

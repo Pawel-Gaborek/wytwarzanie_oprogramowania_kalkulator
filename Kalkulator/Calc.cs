@@ -23,6 +23,7 @@ namespace Kalkulator
             }
             set
             {
+                long test_value;
                 long testValue01;
                 for (int i = 0; i < value.Length; i++)
                 {
@@ -60,6 +61,25 @@ namespace Kalkulator
                         {
                             value = value.Remove(i, 1);
                             i = 0;
+                        }
+                    }
+                }
+
+                //===================================
+                //===================================
+                //===================================
+
+                test_value = System.Convert.ToInt64(value);
+                for (int j = 0; j < value.Length; j++)
+                {
+                    if (this.calcSystem == CalcSystem.Hex)
+                    {
+                        if (this.calcType == CalcType.i8)
+                        {
+                            if (test_value >= 128 | test_value <= -129)
+                            {
+                                throw new Exception("");
+                            }
                         }
                     }
                 }
