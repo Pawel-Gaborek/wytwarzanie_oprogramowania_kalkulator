@@ -70,8 +70,13 @@ namespace Kalkulator
                 //===================================
 
                 test_value = System.Convert.ToInt64(value);
+                long testINT;
+                string testDLUGOSC;
                 for (int j = 0; j < value.Length; j++)
                 {
+                    testDLUGOSC = String.Copy(value);
+                    testDLUGOSC.Remove(j);
+                    testINT = Int32.Parse(value);
                     if (this.calcSystem == CalcSystem.Hex)
                     {
                         if (this.calcType == CalcType.i8)
