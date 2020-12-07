@@ -25,6 +25,10 @@ namespace Kalkulator
             {
                 long test_value;
                 long testValue01;
+                long testINT;
+                string testDLUGOSC;
+                string value_2;
+
                 for (int i = 0; i < value.Length; i++)
                 {
                     if (this.calcSystem == CalcSystem.Hex)
@@ -64,30 +68,24 @@ namespace Kalkulator
                         }
                     }
                 }
-
-                //===================================
-                //===================================
-                //===================================
-
-                test_value = System.Convert.ToInt64(value);
-                long testINT;
-                string testDLUGOSC;
-                for (int j = 0; j < value.Length; j++)
+                for (int j=0 ; j<value.Length ; j++)
                 {
-                    testDLUGOSC = String.Copy(value);
-                    testDLUGOSC.Remove(j);
-                    testINT = Int32.Parse(value);
-                    if (this.calcSystem == CalcSystem.Hex)
+                    Console.WriteLine(j);
+                    if (this.calcType == CalcType.i8)
                     {
-                        if (this.calcType == CalcType.i8)
-                        {
-                            if (test_value >= 128 | test_value <= -129)
+                        Console.WriteLine(j);
+                        if (this.calcSystem == CalcSystem.Dec)
+                        { 
+                            test_value = Convert.ToInt32("32");
+                            if (test_value >= -129 & test_value <= 128)
                             {
-                                throw new Exception("");
+                                j = value.Length - 1;
                             }
                         }
                     }
                 }
+
+                
                 _calcValue = value;
             }
         }
